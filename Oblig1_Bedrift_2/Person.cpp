@@ -16,11 +16,11 @@ public:
         Tilknytt(this);
     }
     
-    void Tilknytt(Person *p) {
+    virtual void Tilknytt(Person *p) {
         tilknyttet = p;
     }
     
-    string to_string() {
+    virtual string to_string() {
         string s = "";
         
         s += "Navn: " + navn + "\n";
@@ -31,6 +31,14 @@ public:
         }
         
         return s;
+    }
+    
+    ///
+    //Get og set
+    ///
+    
+    string get_navn() {
+        return navn;
     }
 };
 
@@ -49,6 +57,30 @@ public:
     
     void AddPaarorende(Person p) {
         paarorende.push_back(p);
+    }
+    
+    string to_string() {
+        string s = Person::to_string();
+        
+        s += "Banknummer: " + std::to_string(banknummer) + "\n";
+        s += "Lonn: " + std::to_string(lonn) + "\n";
+        s += "Stillingstype: ";
+        s += stillingstype;
+        s += "\n";
+        
+        if(paarorende.size() > 0) {
+            s += "Paarorende: ";
+            for(int i = 0; i < paarorende.size(); i++) {
+                s += paarorende[i].get_navn();
+                
+                if(i < paarorende.size()-1) {
+                    s += ",";
+                }
+            }
+            s += "\n";
+        }
+        
+        return s;
     }
     
     ///

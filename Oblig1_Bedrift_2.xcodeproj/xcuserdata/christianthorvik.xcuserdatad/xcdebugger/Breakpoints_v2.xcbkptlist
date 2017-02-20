@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Oblig1_Bedrift_2/Person.cpp"
-            timestampString = "509314096.131745"
+            timestampString = "509315608.32317"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "AddPaarorende(Person p)"
             landmarkType = "5">
          </BreakpointContent>
