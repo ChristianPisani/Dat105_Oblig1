@@ -51,6 +51,10 @@ public:
         paarorende.push_back(p);
     }
     
+    ///
+    //Get og set
+    ///
+    
     void setBanknummer(int banknummer) {
         this->banknummer = banknummer;
     }
